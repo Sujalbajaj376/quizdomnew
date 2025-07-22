@@ -1,0 +1,143 @@
+@import "../components/colors.css";
+
+#dashboard-content {
+	height: 100vh;
+	width: 100%;
+	background: linear-gradient(135deg, var(--secondary-dark) 0%, var(--secondary) 100%);
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	position: relative;
+	overflow: hidden;
+}
+
+#dashboard-content::before {
+	content: '';
+	position: absolute;
+	top: -50px;
+	right: -50px;
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	background: radial-gradient(circle, var(--accent-teal-light) 0%, transparent 70%);
+	opacity: 0.4;
+	z-index: 0;
+}
+
+#dashboard-content::after {
+	content: '';
+	position: absolute;
+	bottom: -100px;
+	left: -100px;
+	width: 500px;
+	height: 500px;
+	border-radius: 50%;
+	background: radial-gradient(circle, var(--accent-pink-light) 0%, transparent 70%);
+	opacity: 0.3;
+	z-index: 0;
+}
+
+.one-time-dashboard {
+	height: 100vh;
+	background-color: var(--secondary);
+}
+
+.dash-btns {
+	flex: 1;
+	margin-left: 140px;
+	display: flex;
+	text-align: left;
+	flex-direction: column;
+	align-content: space-between;
+	align-items: stretch;
+	position: relative;
+	z-index: 1;
+	animation: fadeInLeft 1s ease-out;
+}
+
+@keyframes fadeInLeft {
+	0% { opacity: 0; transform: translateX(-30px); }
+	100% { opacity: 1; transform: translateX(0); }
+}
+
+.dash-btns button {
+	margin-bottom: 20px;
+	transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	box-shadow: var(--shadow-md);
+	border-radius: 12px;
+	background: linear-gradient(90deg, var(--secondary) 0%, var(--accent-teal) 100%);
+	color: var(--primary);
+	font-weight: 500;
+	border: none;
+	overflow: hidden;
+	position: relative;
+}
+
+.dash-btns button:hover {
+	transform: translateY(-5px);
+	box-shadow: var(--shadow-lg);
+}
+
+.dash-btns button::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 50%);
+	transition: transform 0.6s ease;
+}
+
+.dash-btns button:hover::before {
+	transform: translateX(100%);
+}
+
+@media (max-width: 500px) {
+	.dash-btns {
+		margin-top: 130px;
+		margin-left: 0px;
+		padding: 0 20px;
+	}
+}
+
+.blob-svg {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-content: flex-end;
+	position: relative;
+	z-index: 1;
+	animation: fadeInRight 1s ease-out;
+}
+
+@keyframes fadeInRight {
+	0% { opacity: 0; transform: translateX(30px); }
+	100% { opacity: 1; transform: translateX(0); }
+}
+
+.one-time-button {
+	width: 250px;
+	padding: 16px;
+	font-size: 1.1rem;
+}
+
+.wlcm-msg {
+	color: var(--primary);
+	font-size: 2.5rem;
+	font-weight: 600;
+	margin: 40px 0px;
+	line-height: 1.3;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	background: linear-gradient(90deg, var(--primary) 0%, var(--accent-teal) 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	text-fill-color: transparent;
+}
+@media (max-width: 768px) {
+	#dashboard-content {
+		flex-flow: column;
+		justify-content: center;
+	}
+}

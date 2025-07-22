@@ -1,0 +1,53 @@
+:root {
+  /* Main color palette */
+  --primary: #ffffff;
+  --secondary: #1a1a2e;
+  --tertiary: #16213e;
+  --accent-blue: #0f3460;
+  --accent-pink: #e94560;
+  --accent-teal: #00b4d8;
+  --accent-purple: #7209b7;
+  
+  /* Neutral colors */
+  --neutral-100: #f8f9fa;
+  --neutral-200: #e9ecef;
+  --neutral-300: #dee2e6;
+  --neutral-400: #ced4da;
+  --neutral-500: #adb5bd;
+  --neutral-600: #6c757d;
+  --neutral-700: #495057;
+  --neutral-800: #343a40;
+  --neutral-900: #212529;
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(
+    135deg,
+    var(--accent-blue) 0%,
+    var(--accent-pink) 100%
+  );
+  
+  --gradient-secondary: linear-gradient(
+    135deg,
+    var(--accent-purple) 0%,
+    var(--accent-teal) 100%
+  );
+  
+  --glass-gradient: linear-gradient(
+    to right bottom,
+    rgba(26, 26, 46, 0.7),
+    rgba(15, 52, 96, 0.5),
+    rgba(233, 69, 96, 0.3)
+  );
+  
+  /* For backward compatibility */
+  --dark-shadow: var(--neutral-800);
+  --light-shadow: var(--neutral-300);
+  --gradient: var(--gradient-primary);
+  --accent-mustard: var(--accent-teal);
+}

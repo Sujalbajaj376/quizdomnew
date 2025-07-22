@@ -1,0 +1,93 @@
+@import "./colors.css";
+
+.appbar {
+	z-index: 100;
+	position: fixed;
+	width: 100%;
+	display: flex;
+	color: white;
+	padding: 0 20px;
+	justify-content: space-between;
+	background-color: var(--secondary);
+	box-shadow: var(--shadow-lg);
+	height: 70px;
+	transition: all 0.3s ease;
+}
+
+.slider {
+	z-index: 100;
+	background-color: transparent;
+	height: 70px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.home {
+	text-align: center;
+	font-style: normal;
+	padding: 10px 15px;
+	font-size: 24px;
+	font-weight: 600;
+	color: var(--primary);
+	text-decoration: none;
+	transition: all 0.3s ease;
+	display: flex;
+	align-items: center;
+}
+
+.home b {
+	font-size: 24px;
+	background: linear-gradient(90deg, var(--accent-pink) 0%, var(--accent-teal) 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	margin-right: 2px;
+}
+
+.home:hover {
+	color: var(--accent-teal);
+	transform: translateY(-2px);
+}
+
+.appbar-user {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5px 10px;
+	margin: 0 10px;
+	background-color: rgba(255, 255, 255, 0.1);
+	border-radius: 50px;
+	transition: all 0.3s ease;
+}
+
+.appbar-user:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.appbar-user p {
+	font-size: 16px;
+	font-weight: 500;
+	margin: 0 10px;
+	color: var(--primary);
+}
+
+.appbar-user svg {
+	color: var(--accent-pink);
+}
+@media (max-width: 768px) {
+  .home {
+    padding: 0;
+  }
+  .slider {
+    height: 50px;
+  }
+  .appbar-user p {
+    margin: 0;
+  }
+  .home {
+    font-size: 20px;
+  }
+  .home b {
+    font-size: 20px;
+  }
+}
